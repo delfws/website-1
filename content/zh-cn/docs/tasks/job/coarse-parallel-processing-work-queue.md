@@ -210,7 +210,8 @@ root@temp-loe07:/# export BROKER_URL=amqp://guest:guest@rabbitmq-service:5672
 
 # 现在创建队列：
 
-root@temp-loe07:/# /usr/bin/amqp-declare-queue --url=$BROKER_URL -q foo -d foo
+root@temp-loe07:/# /usr/bin/amqp-declare-queue --url=$BROKER_URL -q foo -d 
+foo
 
 # 向它推送一条消息:
 
@@ -273,7 +274,8 @@ In practice, you might write a program to fill the queue using an amqp client li
 例如，我们创建队列并使用 amqp 命令行工具向队列中填充消息。实践中，你可以写个程序来利用 amqp 客户端库来填充这些队列。
 
 ```shell
-/usr/bin/amqp-declare-queue --url=$BROKER_URL -q job1  -d job1
+/usr/bin/amqp-declare-queue --url=$BROKER_URL -q job1  -d 
+job1
 
 for f in apple banana cherry date fig grape lemon melon 
 do
